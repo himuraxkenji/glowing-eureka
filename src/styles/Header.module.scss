@@ -16,6 +16,7 @@
 .nav-logo {
   width: 100px;
 }
+
 .navbar-left ul,
 .navbar-right ul {
   list-style: none;
@@ -27,6 +28,7 @@
 }
 .navbar-left {
   display: flex;
+  align-items: center;
 }
 .navbar-left ul {
   margin-left: 12px;
