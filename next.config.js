@@ -2,20 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  env: {
-    customKey: 'customValue'
-  },
-  basePath: '/dist',
-  compress: true,
-  async redirects() {
-    return [
-      {
-        source: '/hola',
-        destination: 'https://himuraxkenji.io/',
-        permanent: true,
-      }
-    ]
-  }
 }
 
 module.exports = nextConfig

@@ -5,7 +5,7 @@ import menu from '@icons/icon_menu.svg';
 import logo from '@logos/logo_yard_sale.svg';
 import AppContext from '@context/AppContext';
 import shoppingCart from '@icons/icon_shopping_cart.svg';
-import '@styles/Header.scss'
+import styles from '@styles/Header.module.scss'
 
 const Header = () => {
 
@@ -18,7 +18,7 @@ const Header = () => {
     }
 
     return (
-        <nav>
+        <nav className={styles.Nav}>
             <img src={menu} alt="menu" className="menu" />
             <div className="navbar-left">
                 <img src={logo} alt="logo" className="nav-logo" />
