@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import Image from 'next/image';
 import Menu from '@components/Menu'
 import MyOrder from '@containers/MyOrder'
 import menu from '@icons/icon_menu.svg';
@@ -19,9 +20,9 @@ const Header = () => {
 
     return (
         <nav className={styles.Nav}>
-            <img src={menu} alt="menu" className="menu" />
-            <div className="navbar-left">
-                <img src={logo} alt="logo" className="nav-logo" />
+            <Image src={menu} alt="menu" className={styles.menu} />
+            <div className={styles["navbar-left"]}>
+                <Image src={logo} alt="logo" className={styles["nav-logo"]} />
                 <ul>
                     <li>
                         <a href="/">All</a>
@@ -43,13 +44,13 @@ const Header = () => {
                     </li>
                 </ul>
             </div>
-            <div className="navbar-right">
+            <div className={styles["navbar-right"]}>
                 <ul>
-                    <li className="navbar-email" onClick={handleToggle}>
+                    <li className={styles["navbar-email"]} onClick={handleToggle}>
                         platzi@example.com
                     </li>
-                    <li className="navbar-shopping-cart" onClick={() => setToggleOrders(!toggleOrders)}>
-                        <img src={shoppingCart} alt="shopping cart" />
+                    <li className={styles["navbar-shopping-cart"]} onClick={() => setToggleOrders(!toggleOrders)}>
+                        <Image src={shoppingCart} alt="shopping cart" />
 
                         {state.cart.length > 0 ? <div>{state.cart.length}</div> : <div>0</div>}
 

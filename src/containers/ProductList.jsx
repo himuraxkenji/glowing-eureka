@@ -1,24 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import ProductItem from '@components/ProductItem';
-import '@styles/ProductList.scss';
 import useGetProducts from '@hooks/useGetProducts';
+import styles from '@styles/ProductList.module.scss';
+
 
 const API = 'https://api.escuelajs.co/api/v1/products';
 
 const ProductList = () => {
-	const { products, loading } = useGetProducts(API)
+	const { products } = useGetProducts(API)
 
 	return (
-		<section className="main-container">
-			{!loading ?			
-			<div className="ProductList">
+		<section className={styles["main-container"]}>
+			<div className={styles.ProductList}>
 				{products.map(product => <ProductItem product={product} key={product.id} />)}
 			</div>
-			:
-			<div>
-				Espere, se estan cargando los productos...
-			</div>
-			}
 		</section>
 	);
 }
